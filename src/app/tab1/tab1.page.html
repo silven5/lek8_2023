@@ -1,17 +1,84 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Tab 1
-    </ion-title>
-  </ion-toolbar>
+ <app-explore-container name="Приклади Observable"></app-explore-container>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-card>
+        <ion-card-header>
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+            <ion-card-title>
+                Приклад 1
+            </ion-card-title>
+
+
+        </ion-card-header>
+        <ion-button (click)="ras()">Приклад1</ion-button>
+    </ion-card>
+    <ion-card>
+        <ion-card-header>
+
+            <ion-card-title>
+                Приклад 2
+            </ion-card-title>
+
+
+        </ion-card-header>
+        <ion-button (click)="ras1()">Приклад2</ion-button>
+        <ion-button (click)="stop1()">Стоп</ion-button>
+    </ion-card>
+    <ion-card>
+        <ion-card-header>
+
+            <ion-card-title>
+                Приклад 3
+            </ion-card-title>
+
+
+        </ion-card-header>
+        <ion-button (click)="ras2()">Приклад3</ion-button>
+        <ion-button (click)="stop2()">Стоп</ion-button>
+    </ion-card>
+    <ion-card>
+        <ion-card-header>
+
+            <ion-card-title>
+                Приклад 4
+            </ion-card-title>
+
+
+        </ion-card-header>
+        <ion-button (click)="ras3()">Приклад4</ion-button>
+        <ion-button (click)="ras3_1()">Приклад4.1</ion-button>
+         <ion-button (click)="ras4_2()">Приклад4.2</ion-button>
+    </ion-card>
+    <ion-card>
+        <ion-card-header>
+
+            <ion-card-title>
+                Приклад 5
+            </ion-card-title>
+
+
+        </ion-card-header>
+        <ion-label>Введіть користувача</ion-label>
+        <input type="text" #input>
+        
+        <ion-button (click)="ras5_1()">Приклад 5.1</ion-button>
+        <ion-list>
+            <ion-item *ngFor="let elem of gitHubUsers ">{{elem}}</ion-item>
+        </ion-list>
+    </ion-card>
+ <ion-card>
+        <ion-card-header>
+
+            <ion-card-title>
+               Observables vs Promises
+            </ion-card-title>
+
+
+        </ion-card-header>
+        <ion-button (click)="ob_prom()">Приклад6</ion-button>
+        
+    </ion-card>
+ 
 </ion-content>

@@ -1,17 +1,41 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Tab 3
-    </ion-title>
-  </ion-toolbar>
+<app-explore-container name="Ще приклади"></app-explore-container>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 3</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <app-explore-container name="Tab 3 page"></app-explore-container>
+ 
+<!-- <table class="table table-bordered">
+    <tr>
+      <th>ID</th>
+      <th>Body</th>
+      <th>Title</th>
+      <th>UserID</th>
+    </tr>
+    <tr *ngFor="let post of posts">
+      <td>{{ post.id }}</td>
+      <td>{{ post.body }}</td>
+      <td>{{ post.title }}</td>
+      <td>{{ post.userId }}</td>
+    </tr>
+  </table> -->
+  <ion-grid>
+     <ion-row>
+        <ion-col size="auto">
+            ID
+        </ion-col>
+         <ion-col >
+            Body
+        </ion-col >
+         <ion-col >
+            Title
+        </ion-col>
+        <ion-col  size="auto">UserID</ion-col>
+     </ion-row>
+     <ion-row *ngFor="let post of posts">
+         <ion-col size="auto">{{ post.id }}</ion-col>
+        <ion-col >{{ post.body }}</ion-col>
+        <ion-col >{{ post.title }}</ion-col>
+        <ion-col size="auto">{{ post.userId }}</ion-col>
+     </ion-row>
+  </ion-grid>
 </ion-content>
