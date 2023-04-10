@@ -42,7 +42,9 @@ export class Tab2Page {
     of(
       firstInnerObservable,
       secondInnerObservable,
-      triInnerObservable
+      triInnerObservable,
+      cInnerObservable,
+      pInnerObservable
     ).pipe(
       concatAll()
     ).subscribe({
@@ -54,7 +56,9 @@ export class Tab2Page {
     of(
       firstInnerObservable,
       secondInnerObservable,
-      triInnerObservable
+      triInnerObservable,
+      cInnerObservable,
+      pInnerObservable
     ).pipe(
       mergeAll()
     ).subscribe({
@@ -66,7 +70,9 @@ export class Tab2Page {
     of(
       firstInnerObservable,
       secondInnerObservable,
-      triInnerObservable
+      triInnerObservable,
+      cInnerObservable,
+      pInnerObservable
     ).pipe(
       switchAll()
     ).subscribe({
@@ -77,7 +83,10 @@ export class Tab2Page {
     console.log("exhaust");
     of(
       firstInnerObservable,
-      secondInnerObservable
+      secondInnerObservable,
+      triInnerObservable,
+      cInnerObservable,
+      pInnerObservable
     ).pipe(
       exhaust()
     ).subscribe({
@@ -100,7 +109,7 @@ const makeRequest = () => {
 
 //Приклад2
 // потік, генерує 1 по після однієї секунди
-const firstInnerObservable = timer(1000).pipe(
+const firstInnerObservable = timer(100).pipe(
   // mapTo(1)
   map(() => 1)
 );
@@ -113,4 +122,14 @@ const secondInnerObservable = timer(500).pipe(
 const triInnerObservable = timer(200).pipe(
   // mapTo(3)
   map(() => 3)
+);
+//  потік, генерує 4 по після однієї секунди
+const cInnerObservable = timer(1200).pipe(
+  // mapTo(3)
+  map(() => 4)
+);
+//  потік, генерує 5 по після однієї секунди
+const pInnerObservable = timer(1200).pipe(
+  // mapTo(3)
+  map(() => 10)
 );

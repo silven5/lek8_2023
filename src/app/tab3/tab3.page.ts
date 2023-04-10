@@ -24,9 +24,11 @@ export class Tab3Page {
     this.posts = [];
     this.service.getPosts().subscribe((response: Post[]) => {
       let data: any = response;
+      console.log(data);
       this.posts = data.record;
       console.log(this.posts);
     });
+    console.log("HELLO!!!" + this.posts);
     console.log(this.posts);
   }
 }

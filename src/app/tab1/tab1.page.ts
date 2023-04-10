@@ -84,12 +84,7 @@ export class Tab1Page {
   //Приклад5
   @ViewChild('input', { static: true }) input!: ElementRef;
 
-  // ras5() {
-  //   let keyUp$ = fromEvent(this.input.nativeElement, 'keyup')
-  //     .subscribe({
-  //       next: res => console.log(res)
-  //     });
-  // }
+
   gitHubUsers: string[] = [];
   recordRepsToList = (reps: string | any[]) => {
     this.gitHubUsers = [];
@@ -125,6 +120,9 @@ export class Tab1Page {
       setTimeout(() => {
         observer.next('hello');
       }, 200);
+      setTimeout(() => {
+        observer.next('hello+hi');
+      }, 300);
     });
 
     s.subscribe(value => {
@@ -139,6 +137,9 @@ export class Tab1Page {
       setTimeout(() => {
         resolve('hello');
       }, 200);
+      setTimeout(() => {
+        observer.next('hello+hi');
+      }, 300);
     });
 
     p.then(value => {
@@ -154,6 +155,7 @@ const observable = new Observable(observer => {
   observer.next(25);
   observer.next(3 + 5);
   observer.next("Hello Observable");
+  observer.next("HELLOOO!!!");
   observer.complete();
 })
 //створили спостирігача
@@ -188,7 +190,7 @@ const timer1 = new Observable(observer => {
   }
 });
 //Приклад4
-const timer2 = range(0, 50)
+const timer2 = range(0, 10)
   .pipe(
 
     filter((num) => num % 3 === 0),
@@ -218,5 +220,5 @@ const obs = new Observable((observer) => {
 //Приклад 4.2
 const array_o = from([-2, -5, 4, 5, 6, -7, 22, -100]).pipe(
   filter(num => num < 0),
-  map((val) => { return val as number * 3 })
+  map((val) => { return val as number * 2 })
 )
