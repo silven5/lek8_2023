@@ -1,35 +1,23 @@
 <ion-header [translucent]="true">
- <app-explore-container name="HOO"></app-explore-container>
+  <app-explore-container name="HOO"></app-explore-container>
 </ion-header>
 
 <ion-content [fullscreen]="true">
- <ion-card>
-        <ion-card-header>
-
-            <ion-card-title>
-                Приклад 1
-            </ion-card-title>
-
-
-        </ion-card-header>
-        <ion-button (click)="ras()">Приклад1</ion-button>
-        <ion-button (click)="ras1()">Приклад1_1</ion-button>
-    </ion-card>
-    <ion-card>
-        <ion-card-header>
-
-            <ion-card-title>
-                Приклад 2
-            </ion-card-title>
-
-
-        </ion-card-header>
-        <ion-button (click)="ras2()">Приклад2</ion-button>
-        <ion-button (click)="ras2_1()">Приклад2_1</ion-button>
-        <ion-button (click)="ras2_2()">Приклад2_2</ion-button>
-        <ion-button (click)="ras2_3()">Приклад2_3</ion-button>
-    </ion-card>
-
-
- 
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title> Приклад 1 </ion-card-title>
+    </ion-card-header>
+    <ion-button (click)="ras()">Приклад1</ion-button>
+    <ion-button (click)="ras1()">Приклад1_1</ion-button>
+    <ion-button color="danger" (click)="stop()">Стоп приклад 1</ion-button>
+  </ion-card>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title> Приклад 2 </ion-card-title>
+    </ion-card-header>
+    <ion-button (click)="ras2()">Приклад2</ion-button>
+    <ion-button (click)="ras2_1()">Приклад2_1</ion-button>
+    <ion-button (click)="ras2_2()">Приклад2_2</ion-button>
+    <ion-button (click)="ras2_3()">Приклад2_3</ion-button>
+  </ion-card>
 </ion-content>

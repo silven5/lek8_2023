@@ -1,0 +1,50 @@
+<ion-header [translucent]="true">
+  <app-explore-container name="Subject"></app-explore-container>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-card class="card">
+    <ion-card-header>
+      <ion-card-title>
+        <h2>Приклад 1. Subject</h2>
+      </ion-card-title>
+    </ion-card-header>
+
+    <ion-button (click)="ras1()">Subject</ion-button>
+    <ion-button (click)="ras1_2()">Observable</ion-button>
+  </ion-card>
+
+  <ion-card class="card">
+    <ion-card-header>
+      <ion-card-title>
+        <h2>Приклад 2. Subject Multicast</h2>
+      </ion-card-title>
+    </ion-card-header>
+    <ion-button (click)="ras2()">Multicast</ion-button>
+  </ion-card>
+
+  <ion-card class="card">
+    <ion-card-header>
+      <ion-card-title>
+        <h2>Приклад 3. Subject ReplaySubject</h2>
+      </ion-card-title>
+    </ion-card-header>
+    <ion-button (click)="ras3()">Go</ion-button>
+  </ion-card>
+  <ion-card class="card">
+    <ion-card-header>
+      <ion-card-title>
+        <h2>Приклад 4. Subject BehaviorSubject</h2>
+      </ion-card-title>
+    </ion-card-header>
+    <ion-button (click)="ras4()">Go</ion-button>
+  </ion-card>
+  <ion-card class="card">
+    <ion-card-header>
+      <ion-card-title>
+        <h2>Приклад 5. Subject AsyncSubject</h2>
+      </ion-card-title>
+    </ion-card-header>
+    <ion-button (click)="ras5()">Go</ion-button>
+  </ion-card>
+</ion-content>
